@@ -1,0 +1,153 @@
+# Maysoor (ميسور) — brand playbook for a gamified financial-literacy platform
+# for children aged 7–10 and their parents. Slogan: "ميسور.. لبناء جيل واعي مالياً".
+#
+# Brand hexes are kept exactly as specified in the brand guide. Two of them are
+# fill-only: Teal Mint (#00A896) and Coral Orange (#FF5733) fail WCAG AA with
+# white text (2.98:1 and 3.15:1), so text on those fills is Deep Slate
+# (#1E293B, 4.91:1 / 4.64:1), and teal *text* on cream uses the text-safe
+# Deep Teal (#007A6D, 5.01:1). See quality_rules.
+
+identity:
+  name: "Maysoor"
+  category: custom
+  mood: warm, playful, encouraging, trustworthy, empowering
+  pace: moderate
+  best_for: "Maysoor (ميسور) Arabic RTL promos, parent-facing explainers, Malik & Nour episode teasers, social reels for the kids' financial-literacy platform"
+
+taste_profile:
+  design_read: "Material 3 Expressive for a kids' money-habits brand that parents must trust: joyful, rounded and bright for the child, calm and clear for the parent deciding to subscribe. Arabic right-to-left first; simplicity (يُسر) over spectacle."
+  visual_variance: 6
+  motion_intensity: 6
+  information_density: 4
+  palette_discipline: "Soft Cream field, Teal Mint as the brand anchor, Sunny Yellow for joy and rewards, Coral Orange reserved for the one call-to-action or key alert per frame. Deep Slate for all running text."
+  layout_variation: "Alternate character-led frames (Malik & Nour in everyday Arab settings: school, supermarket, home), pill-button CTA end cards, 24px-radius cards on cream, and full-bleed teal section breaks. Mirror layouts for RTL: primary content anchored right."
+  reference_strategy: "Generate one reference still of Malik & Nour plus one of the piggy-bank / smiling-coin props and reuse them as anchors for every scene before batch generation."
+  anti_patterns:
+    - "get-rich-quick imagery: stacks of cash, gold bars, luxury cars, trading charts"
+    - "ads-style consumer pressure: shopping sprees, sale tags, credit-card glamour"
+    - "white text on Teal Mint or Coral Orange fills (fails contrast)"
+    - "harsh outlines, photorealism, or dark moody backgrounds"
+    - "left-to-right layouts or Latin-first typography on Arabic frames"
+    - "overly academic MSA jargon in on-screen copy"
+  quality_gates:
+    - "Would a parent trust this frame? Would a 7-year-old smile at it?"
+    - "Arabic text renders correctly shaped and right-to-left, with no broken ligatures or reversed numerals."
+    - "Only one Coral Orange element per frame, and it is the action."
+
+visual_language:
+  color_palette:
+    primary: ["#00A896", "#007A6D"]
+    accent: ["#FFB703", "#FF5733"]
+    background: "#F0FDF4"
+    text: "#1E293B"
+    muted: "#475569"
+  composition: right-to-left reading order, generous rounded negative space, one focal character or prop per frame, decorative organic blobs drifting behind content, pill-shaped CTAs anchored bottom-center
+  texture: flat Material 3 vector fills, soft curves, zero harsh outlines, low-opacity ambient shadows (soft floating elevation), no gradients except gentle blob washes
+
+typography:
+  headings:
+    font: "Baloo Bhaijaan 2"
+    weight: 800
+    tracking: "0em"
+  body:
+    font: "Tajawal"
+    weight: 500
+    line_height: 1.6
+  stat_card:
+    font: "Baloo Bhaijaan 2"
+    weight: 800
+    size_multiplier: 3.5
+  scale_system: "major_third"
+  weight_matrix:
+    title: 800
+    heading: 700
+    body: 500
+    caption: 400
+
+motion:
+  transitions: [slide-right, scale-pop, blob-morph, fade]
+  animation_style: "Material 3 expressive spring: soft overshoot, friendly bounce, never jittery"
+  pacing_rules:
+    min_scene_hold_seconds: 2.0
+    max_scene_hold_seconds: 9
+    text_card_hold_seconds: 3.0
+    stat_card_hold_seconds: 2.5
+    transition_duration_seconds: 0.4
+  entrance: "pop-in scale 0.85 -> 1.04 -> 1.0 with fade, sliding in from the right (RTL)"
+  exit: "gentle scale-down fade toward the left"
+
+audio:
+  voice_style: "warm, encouraging Arabic; friendly Egyptian-colloquial phrasing over clear MSA, parent-to-parent trust with a smile, never salesy"
+  music_mood: "bright playful ukulele / marimba / light percussion, optimistic, family-friendly"
+  music_volume: 0.1
+  sfx_style: "coin clinks, soft pops, sparkle chimes on badges and rewards, gentle whoosh on transitions"
+  ducking_threshold_db: -4
+  voice_variation_allowed: true
+  hero_moment_voice_shift: "slow slightly and warm up on the slogan 'ميسور.. لبناء جيل واعي مالياً'"
+  transition_voice_shift: "brief smile-pause, then resume with lifted energy"
+
+asset_generation:
+  image_prompt_prefix: "flat vector illustration, Google Material 3 expressive style, soft rounded shapes, no outlines, bright teal #00A896, sunny yellow #FFB703 and coral #FF5733 accents on soft cream background, friendly Arab family setting, "
+  image_negative_prompt: "photorealistic, harsh outlines, dark background, gritty, cash piles, gold bars, luxury, stock-market charts, credit cards, scary, clutter, Latin text, watermark"
+  diagram_style: "rounded 24px cards on cream, teal connectors, yellow highlight chips, Arabic RTL labels in Tajawal"
+  consistency_anchors:
+    - "Malik (boy) and Nour (girl), ages 7–10, same outfits and proportions in every scene"
+    - "Soft Cream (#F0FDF4) backgrounds with Teal Mint (#00A896) as the brand anchor"
+    - "Cheerful piggy banks, smiling coins, achievement badges, and the three-jar goal bank (save / spend / give — ادخار / إنفاق / عطاء)"
+    - "Pill-shaped buttons and 24px-radius cards with soft floating shadows"
+    - "Material Symbols Rounded iconography"
+    - "Arabic headings in Baloo Bhaijaan 2 (fallback: Readex Pro), body in Tajawal (fallback: IBM Plex Sans Arabic)"
+  default_vignette: false
+
+overlays:
+  stat_card:
+    bg: "#FFFFFF"
+    border: "#00A896"
+    text: "#1E293B"
+    radius: 24
+    shadow: "0 8px 24px rgba(0,168,150,0.12)"
+  key_term:
+    bg: "#CCF2EE"
+    text: "#005F55"
+    radius: 9999
+  section_title:
+    bg: "#00A896"
+    text: "#1E293B"
+    radius: 24
+  stat_reveal:
+    bg: "#FFF4D6"
+    text: "#1E293B"
+    accent: "#FFB703"
+    radius: 24
+  hero_title:
+    bg: "#FFB703"
+    text: "#1E293B"
+    radius: 24
+    shadow: "0 12px 32px rgba(255,183,3,0.25)"
+  provider_chip:
+    bg: "#FFFFFF"
+    text: "#1E293B"
+    border: "#CCF2EE"
+    radius: 9999
+
+quality_rules:
+  - "Minimum contrast ratio 4.5:1 for all text"
+  - "Never white text on Teal Mint #00A896 (2.98:1) or Coral Orange #FF5733 (3.15:1); use Deep Slate #1E293B on those fills"
+  - "Teal text on cream uses Deep Teal #007A6D, not #00A896"
+  - "Coral Orange #FF5733 appears once per frame at most, reserved for the CTA or key alert"
+  - "All Arabic text is right-to-left, correctly shaped, and readable at 720p on mobile"
+  - "Buttons are pill-shaped (fully rounded); cards use 24px radius with soft low-opacity shadows"
+  - "Teal Mint and Coral Orange can merge for protanopia viewers; never let teal-vs-coral carry meaning alone (pair with label, icon, or position), and keep them non-adjacent in charts"
+  - "No advertising or consumer-pressure imagery; financial imagery stays playful and value-driven"
+  - "End on the slogan 'ميسور.. لبناء جيل واعي مالياً' with the primary CTA"
+
+chart_palette:
+  - "#00A896"
+  - "#FFB703"
+  - "#1E293B"
+  - "#FF5733"
+
+color_rules:
+  harmony_type: "triadic"
+  contrast_validation: true
+  colorblind_safe: true
