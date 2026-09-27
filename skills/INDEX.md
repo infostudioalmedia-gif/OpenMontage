@@ -304,6 +304,7 @@ Style playbooks (`styles/*.yaml`) define visual language, typography, motion, au
 | `premium-minimalist` | minimalist | calm, editorial | Investor updates, expert explainers, product narratives |
 | `flat-motion-graphics` | motion-graphics | energetic, bold | Social media, TikTok, startups |
 | `minimalist-diagram` | whiteboard | focused, technical | Technical deep-dives, architecture |
+| `maysoor` | custom | warm, playful, trustworthy | Maysoor (ميسور) brand: Arabic RTL kids' financial-literacy promos, parent explainers, reels |
 
 Load via `styles/playbook_loader.py`: `load_playbook("clean-professional")`
 
